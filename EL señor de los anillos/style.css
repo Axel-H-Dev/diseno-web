@@ -1,0 +1,277 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Garamond', serif;
+    color: #333;
+    background-color: #f4f1e0; 
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #3e2b17; 
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #f8e4c9; 
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1a055; 
+}
+
+
+header h1, header h2 {
+    text-align: center;
+    color: #3e2b17;
+    margin: 10px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
+.content, .about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+
+.content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.content .image img {
+    width: 100%;
+    max-width: 350px; 
+    border-radius: 8px;
+}
+
+
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3e2b17;
+}
+
+.about-section p {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+
+.footer {
+    background-color: #3e2b17;
+    color: #f8e4c9;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.footer form label {
+    margin-top: 10px;
+}
+
+.footer form input, .footer form textarea, .footer form button {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1a055;
+}
+
+.footer form button {
+    background-color: #d1a055;
+    color: #3e2b17;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer form button:hover {
+    background-color: #e0b875;
+}
+
+
+.footer p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #e6d5bd;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .footer form input, .footer form textarea {
+        width: 100%;
+    }
+}
+
+
+
+/* Estilos de la galeria */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #3e2b17;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #f8e4c9;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1a055;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f1e0;
+}
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #d1a055;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #3e2b17;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.card-link {
+    display: inline-block;
+    color: #d1a055;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #d1a055;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-link:hover {
+    background-color: #d1a055;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* Estilos de la Nosotros */
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f4e6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 500px; 
+    border-radius: 8px;
+}

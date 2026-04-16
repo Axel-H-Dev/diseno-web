@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Señor de los Anillos - Tierra Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="nosotros.html">Nosotros</a> 
+        <a href="#contacto">Contacto</a>
+    </div>
+
+
+    <header>
+        <h1 style="text-align: center;">El Señor de los Anillos</h1>
+        <h2 style="text-align: center;">J.R.R. Tolkien</h2>
+    </header>
+
+ 
+    <section class="content">
+        <div class="text">
+            <p>
+                El escritor británico J. R. R. Tolkien ha sido uno de los autores de literatura fantástica más
+                importantes de todos los tiempos. En "El Señor de los Anillos" creó un mundo poblado por hombres,
+                elfos, hobbits y enanos, enfrentados en combates épicos contra las malvadas huestes de Sauron, el
+                Señor Oscuro. El salto al mundo del cine catapultó las historias de Tolkien al éxito absoluto.
+            </p>
+        </div>
+        <div class="image">
+            <img src="/EL señor de los anillos/img/tolkin.jpg" alt="Imagen de J.R.R. Tolkien">
+        </div>
+    </section>
+
+
+    
+
+    
+    <footer id="contacto" class="footer">
+        <h2>Contacto</h2>
+        <form onsubmit="sendEmail(event)">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p>&copy; 2024 Tierra Media. Todos los derechos reservados. Sitio web no oficial inspirado en la obra de J.R.R.
+            Tolkien.</p>
+    </footer>
+
+    
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = 'Nuevo mensaje de contacto';
+            const mailToLink = `mailto:axx.90@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Correo: " + email + "\n\nMensaje:\n" + message)}`;
+
+            window.location.href = mailToLink;
+        }
+    </script>
+
+</body>
+
+</html>
