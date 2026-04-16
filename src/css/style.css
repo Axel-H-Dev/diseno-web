@@ -1,0 +1,530 @@
+/* Global styles ------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Garamond', serif;
+    color: #333;
+    background-color: #f4f1e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Estilos de Gandalf ------------------ */
+body.page-gandalf {
+    background-image: url("../images/Gandalf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body.page-gandalf .content {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos compartidos de personajes ------------------ */
+body.page-character {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f4f1e0;
+}
+
+/* Estilos de Frodo ------------------ */
+body.page-frodo {
+    background-image: url("../images/frodo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+body.page-frodo .bg-media-frodo {
+    display: none;
+}
+
+body.page-frodo::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body.page-frodo .nav-container,
+body.page-frodo .story-content,
+body.page-frodo .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos de Samwise ------------------ */
+body.page-samwise {
+    background-image: url("../images/Sam_Gamyi.webp");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: right 8%;
+    background-attachment: fixed;
+}
+
+body.page-samwise .bg-media-samwise {
+    display: none;
+}
+
+body.page-samwise::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body.page-samwise .nav-container,
+body.page-samwise .story-content,
+body.page-samwise .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos de Sauron ------------------ */
+body.page-sauron {
+    background-image: url("../images/Sauron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.page-sauron::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body.page-sauron .nav-container,
+body.page-sauron .story-content,
+body.page-sauron .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos de Boromir ------------------ */
+body.page-boromir {
+    background-image: url("../images/boromir.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+body.page-boromir .bg-media-boromir {
+    display: none;
+}
+
+body.page-boromir::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body.page-boromir .nav-container,
+body.page-boromir .story-content,
+body.page-boromir .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos del layout de historias/personajes ------------------ */
+body.page-character .character-story-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+body.page-character .character-text-box {
+    max-width: 900px;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: rgba(20, 12, 8, 0.38);
+    border: 1px solid rgba(248, 228, 201, 0.22);
+    backdrop-filter: blur(1.5px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+body.page-character .character-text-box h1 {
+    margin-bottom: 14px;
+    color: #f8e4c9;
+}
+
+body.page-character .texto-parrafo {
+    color: #f8ede0;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Estilos de Aragorn ------------------ */
+body.page-aragorn {
+    background-image: url("../images/aragon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.page-aragorn .bg-media-aragorn {
+    display: none;
+}
+
+body.page-aragorn::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body.page-aragorn .nav-container,
+body.page-aragorn .story-content,
+body.page-aragorn .footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos de navegacion principal ------------------ */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #3e2b17;
+    padding: 10px 0;
+    border-radius: 15px;
+}
+
+.navbar a {
+    color: #f8e4c9;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1a055;
+}
+
+header h1,
+header h2 {
+    text-align: center;
+    color: #3e2b17;
+    margin: 10px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Estilos de contenido general ------------------ */
+.content,
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.content .image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3e2b17;
+}
+
+.about-section p {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+/* Estilos de footer ------------------ */
+.footer {
+    background-color: #3e2b17;
+    color: #f8e4c9;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.footer form label {
+    margin-top: 10px;
+}
+
+.footer form input,
+.footer form textarea,
+.footer form button {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1a055;
+}
+
+.footer form button {
+    background-color: #d1a055;
+    color: #3e2b17;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer form button:hover {
+    background-color: #e0b875;
+}
+
+.footer p {
+    margin: 4px 0 0;
+    font-size: 0.78rem;
+    text-align: center;
+    color: #e6d5bd;
+}
+
+
+
+.text-box {
+
+    margin-bottom: 20px;
+}
+/* Estilos de la galería ------------------ */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f1e0;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #d1a055;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 60%;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilos de Historias------------------ */
+
+body.page-historias {
+    background-image: url("../images/historias-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f4f1e0;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0 0;
+}
+
+.story-content {
+    
+    max-width: 900px;
+    padding: 30px 28px 34px;
+    
+}
+
+.text-box {
+    display: block;
+}
+
+.texto-parrafo {
+    margin: 0 0 18px;
+    text-align: justify;
+    line-height: 1.9;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    color: #f2f1ea;
+    font-size: 1.16rem;
+}
+
+.character-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgba(62, 43, 23, 0.95);
+    padding: 12px 0;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.character-nav a {
+    color: #f8e4c9;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid #d1a055;
+    border-radius: 24px;
+    background: rgba(248, 228, 201, 0.16);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.character-nav a:hover {
+    background-color: #d1a055;
+    color: #3e2b17;
+    transform: translateY(-2px);
+}
+
+.character-nav a.active {
+    background-color: #f8e4c9;
+    color: #3e2b17;
+    border-color: #f8e4c9;
+}
+
+.story-links {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    color: #3e2b17;
+}
+
+.story-links h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.story-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.story-links li {
+    margin-bottom: 12px;
+}
+
+.story-links a {
+    color: #3e2b17;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.story-links a:hover {
+    color: #d1a055;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .footer form input,
+    .footer form textarea {
+        width: 100%;
+    }
+
+    .story-content {
+        margin: 2rem 1rem 1rem;
+        padding: 22px;
+    }
+
+    .character-nav {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .character-nav a {
+        padding: 6px 12px;
+        font-size: 0.95rem;
+    }
+
+    body.page-character .character-text-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Estilos de la Nosotros */
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f4e6; 
+    border-radius: 8px;
+    box-shadow: 0 0 0 0  rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 800px; 
+    border-radius: 8px;
+}
+
+
