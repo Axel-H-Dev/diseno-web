@@ -37,7 +37,7 @@ body.page-character {
 
 /* Estilos de Frodo ------------------ */
 body.page-frodo {
-    background-image: url("../images/frodo.jpg");
+    background-image: url("../images/Frodo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
@@ -95,7 +95,7 @@ body.page-samwise .footer {
 
 /* Estilos de Sauron ------------------ */
 body.page-sauron {
-    background-image: url("../images/Sauron.jpg");
+    background-image: url("../images/sauron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
